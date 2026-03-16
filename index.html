@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Ivory Dune Studio | Rosemary Beach & 30A Family Photographer</title>
   <meta name="description" content="Ivory Dune Studio — luxury family and lifestyle photographer serving Rosemary Beach, Seaside, WaterSound, and all of 30A. Heirloom images of your people, your light, your moment." />
   <meta name="keywords" content="30A photographer, Rosemary Beach photographer, Seaside Florida photographer, 30A family photographer, Rosemary Beach family photos, 30A beach photographer, Inlet Beach photographer, WaterSound photographer" />
@@ -769,11 +769,29 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
-      nav { padding: 1.2rem 2rem; }
+      nav {
+        padding: 1rem 1.5rem;
+        padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+      }
       .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-right { height: 55vw; }
-      .hero-left { padding: 3rem 2rem; }
+      .logo-name { font-size: 0.95rem; }
+      .logo-sub { display: none; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 0;
+      }
+      .hero-left {
+        padding: 2rem 1.5rem 2.5rem;
+        padding-top: calc(80px + env(safe-area-inset-top, 0px) + 1.5rem);
+      }
+      .hero-right { height: 60vw; order: -1; }
+      .hero-brand { margin-bottom: 1.2rem; }
+      .hero-brand-svg { width: 44px; height: 44px; }
+      .hero-brand-name { font-size: 1.6rem; }
+      .hero-brand-name span { font-size: 0.7rem; }
+
       .about { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 2rem; }
       .about-photo-frame { aspect-ratio: 3/2; }
       .experience-strip { grid-template-columns: 2fr 2fr; padding: 2.5rem 2rem; }
@@ -797,6 +815,19 @@
       .footer-social { justify-content: center; }
       .footer-right { text-align: center; }
       section { padding: 4rem 2rem; }
+    }
+
+    /* iOS Safari safe area for notch/dynamic island */
+    @supports (padding-top: env(safe-area-inset-top)) {
+      nav {
+        padding-top: calc(1.5rem + env(safe-area-inset-top));
+      }
+      @media (max-width: 900px) {
+        nav { padding-top: calc(0.8rem + env(safe-area-inset-top)); }
+        .hero-left {
+          padding-top: calc(80px + env(safe-area-inset-top) + 1.5rem);
+        }
+      }
     }
     /* ─── CALENDLY ─── */
     .btn-calendly {
