@@ -69,9 +69,15 @@
     }
 
     .nav-links {
-      display: flex;
+      display: flex !important;
+      flex-direction: row !important;
       gap: 2.5rem;
       list-style: none;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none !important; }
     }
 
     .nav-links a {
@@ -975,6 +981,10 @@
       gap: 2.5rem;
     }
     .mobile-menu.open { display: flex; }
+    @media (min-width: 769px) {
+      .mobile-menu { display: none !important; }
+      .nav-hamburger { display: none !important; }
+    }
     .mobile-menu a {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2rem;
