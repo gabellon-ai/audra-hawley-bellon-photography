@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audra Hawley Bellon | 30A & Rosemary Beach Family Photographer</title>
+  <meta name="description" content="Audra Hawley Bellon — luxury family and lifestyle photographer serving Rosemary Beach, Seaside, WaterSound, and all of 30A. Heirloom images of your people, your light, your moment." />
+  <meta name="keywords" content="30A photographer, Rosemary Beach photographer, Seaside Florida photographer, 30A family photographer, Rosemary Beach family photos, 30A beach photographer, Inlet Beach photographer, WaterSound photographer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ivory:     #F5F0E8;
+      --ivory-deep:#EDE4D4;
+      --sand:      #D9CBBA;
+      --driftwood: #B8966A;
+      --warm-dark: #2E2318;
+      --sage:      #7A9480;
+      --sea:       #4D7A87;
+      --sea-light: #C8DBE0;
+      --text:      #2E2318;
+      --text-mid:  #5C4A35;
+      --text-muted:#9A8472;
+      --white:     #FDFAF5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      background: var(--ivory);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 4rem;
+      background: rgba(245, 240, 232, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(184, 150, 106, 0.2);
+      transition: padding 0.3s ease;
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--warm-dark);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--driftwood); }
+
+    .nav-cta {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 400;
+      color: var(--white) !important;
+      background: var(--driftwood);
+      padding: 0.55rem 1.4rem;
+      transition: background 0.3s !important;
+    }
+
+    .nav-cta:hover { background: var(--sea) !important; color: var(--white) !important; }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4rem 5rem 4rem;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--driftwood);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      line-height: 1.0;
+      color: var(--warm-dark);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--driftwood);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-mid);
+      max-width: 380px;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-location {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-location::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--sand);
+    }
+
+    .btn-primary {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--warm-dark);
+      padding: 1rem 2.2rem;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--driftwood);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm-dark);
+      border: 1px solid var(--sand);
+      padding: 1rem 2.2rem;
+      text-decoration: none;
+      transition: border-color 0.3s, color 0.3s;
+      margin-left: 1rem;
+    }
+
+    .btn-outline:hover { border-color: var(--driftwood); color: var(--driftwood); }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Photo mosaic - CSS only placeholder art */
+    .hero-photo-main {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(160deg, var(--sea-light) 0%, var(--sand) 40%, var(--driftwood) 100%);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 30% 30%, rgba(255,255,255,0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 70% 70%, rgba(77,122,135,0.2) 0%, transparent 70%);
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.05em;
+    }
+
+    /* Decorative accent */
+    .hero-accent-line {
+      position: absolute;
+      top: 50%;
+      left: -1px;
+      width: 1px;
+      height: 180px;
+      background: linear-gradient(to bottom, transparent, var(--driftwood), transparent);
+      transform: translateY(-50%);
+    }
+
+    /* ─── SECTION SHARED ─── */
+    section { padding: 6rem 4rem; }
+
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--driftwood);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+      line-height: 1.1;
+      color: var(--warm-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title em { font-style: italic; color: var(--driftwood); }
+
+    /* ─── ABOUT ─── */
+    .about {
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-photo {
+      position: relative;
+    }
+
+    .about-photo-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--sand) 0%, var(--sea-light) 60%, var(--sage) 100%);
+      position: relative;
+    }
+
+    .about-photo-frame::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 60%;
+      height: 60%;
+      border: 1px solid var(--sand);
+      z-index: -1;
+    }
+
+    .about-photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 40% 30%, rgba(255,255,255,0.2) 0%, transparent 70%);
+    }
+
+    .about-text p {
+      color: var(--text-mid);
+      font-size: 1rem;
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+
+    .about-text p:last-of-type { margin-bottom: 2rem; }
+
+    .about-signature {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 2rem;
+      color: var(--driftwood);
+      margin-top: 1rem;
+    }
+
+    /* ─── EXPERIENCE STRIP ─── */
+    .experience-strip {
+      background: var(--warm-dark);
+      padding: 3rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .exp-item {}
+
+    .exp-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 3rem;
+      color: var(--driftwood);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+
+    /* ─── SERVICES ─── */
+    .services {
+      background: var(--ivory);
+    }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+
+    .services-intro {
+      color: var(--text-mid);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(46,35,24,0.08);
+      z-index: 1;
+    }
+
+    .service-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.9rem;
+      color: var(--sand);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--warm-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--driftwood);
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--driftwood);
+      transition: width 0.4s ease;
+    }
+
+    .service-card:hover::after { width: 100%; }
+
+    /* ─── GALLERY ─── */
+    .gallery {
+      background: var(--ivory-deep);
+      padding: 6rem 2rem;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 0 2rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: 4px;
+    }
+
+    .g-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .g-item:nth-child(1) { grid-column: 1 / 6; grid-row: 1; aspect-ratio: 4/5; }
+    .g-item:nth-child(2) { grid-column: 6 / 9; grid-row: 1; aspect-ratio: 3/5; }
+    .g-item:nth-child(3) { grid-column: 9 / 13; grid-row: 1; aspect-ratio: 4/5; }
+    .g-item:nth-child(4) { grid-column: 1 / 5; grid-row: 2; aspect-ratio: 4/3; }
+    .g-item:nth-child(5) { grid-column: 5 / 9; grid-row: 2; aspect-ratio: 4/3; }
+    .g-item:nth-child(6) { grid-column: 9 / 13; grid-row: 2; aspect-ratio: 4/3; }
+
+    .g-fill {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      transition: transform 0.6s ease;
+    }
+
+    .g-item:hover .g-fill { transform: scale(1.04); }
+
+    .g-fill-1 { background: linear-gradient(155deg, #C8DBE0 0%, #D9CBBA 50%, #B8966A 100%); }
+    .g-fill-2 { background: linear-gradient(200deg, #7A9480 0%, #C8DBE0 60%, #D9CBBA 100%); }
+    .g-fill-3 { background: linear-gradient(120deg, #D9CBBA 0%, #EDE4D4 40%, #4D7A87 100%); }
+    .g-fill-4 { background: linear-gradient(170deg, #B8966A 0%, #D9CBBA 100%); }
+    .g-fill-5 { background: linear-gradient(140deg, #4D7A87 0%, #7A9480 50%, #C8DBE0 100%); }
+    .g-fill-6 { background: linear-gradient(160deg, #EDE4D4 0%, #B8966A 60%, #7A9480 100%); }
+
+    .g-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(46,35,24,0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.4s;
+    }
+
+    .g-item:hover .g-overlay {
+      background: rgba(46,35,24,0.35);
+    }
+
+    .g-overlay-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: white;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .g-item:hover .g-overlay-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── PROCESS ─── */
+    .process {
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 1.5rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--ivory-deep);
+    }
+
+    .process-step:last-child { border-bottom: none; }
+
+    .step-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--sand);
+      line-height: 1;
+    }
+
+    .step-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--warm-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .step-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials {
+      background: var(--warm-dark);
+      text-align: center;
+    }
+
+    .testimonials .section-label { color: var(--driftwood); }
+    .testimonials .section-title { color: var(--ivory); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(184,150,106,0.2);
+      padding: 2.5rem 2rem;
+      text-align: left;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      color: var(--driftwood);
+      opacity: 0.5;
+      line-height: 1;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonial-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--sand);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-name {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--driftwood);
+    }
+
+    .testimonial-loc {
+      font-size: 0.75rem;
+      color: rgba(217,203,186,0.5);
+    }
+
+    /* ─── CONTACT ─── */
+    .contact {
+      background: var(--ivory);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .contact-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(145deg, var(--sea-light) 0%, var(--sage) 50%, var(--driftwood) 100%);
+      position: relative;
+    }
+
+    .contact-photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 35% 25%, rgba(255,255,255,0.18) 0%, transparent 65%);
+    }
+
+    .contact-form { max-width: 480px; }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--sand);
+      padding: 0.75rem 0;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--warm-dark);
+      outline: none;
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--driftwood);
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .form-group select {
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--warm-dark);
+      padding: 3rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--ivory);
+      letter-spacing: 0.1em;
+    }
+
+    .footer-brand span { color: var(--driftwood); }
+
+    .footer-tagline {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .footer-nav a {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sand);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-nav a:hover { color: var(--driftwood); }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(184,150,106,0.3);
+      color: var(--sand);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .social-link:hover { border-color: var(--driftwood); color: var(--driftwood); }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(154,132,114,0.6);
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow  { animation: fadeUp 0.8s ease 0.2s both; }
+    .hero-title    { animation: fadeUp 0.8s ease 0.4s both; }
+    .hero-sub      { animation: fadeUp 0.8s ease 0.6s both; }
+    .hero-location { animation: fadeUp 0.8s ease 0.7s both; }
+    .hero-ctas     { animation: fadeUp 0.8s ease 0.8s both; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 2rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-right { height: 55vw; }
+      .hero-left { padding: 3rem 2rem; }
+      .about { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 2rem; }
+      .about-photo-frame { aspect-ratio: 3/2; }
+      .experience-strip { grid-template-columns: 2fr 2fr; padding: 2.5rem 2rem; }
+      .services { padding: 4rem 2rem; }
+      .services-header { grid-template-columns: 1fr; gap: 1rem; }
+      .services-grid { grid-template-columns: 1fr; gap: 2px; }
+      .gallery { padding: 4rem 1rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .g-item:nth-child(1) { grid-column: 1/2; grid-row: 1; }
+      .g-item:nth-child(2) { grid-column: 2/3; grid-row: 1; }
+      .g-item:nth-child(3) { grid-column: 1/2; grid-row: 2; }
+      .g-item:nth-child(4) { grid-column: 2/3; grid-row: 2; }
+      .g-item:nth-child(5) { grid-column: 1/2; grid-row: 3; }
+      .g-item:nth-child(6) { grid-column: 2/3; grid-row: 3; }
+      .process { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 2rem; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 2rem; }
+      .contact-photo { aspect-ratio: 16/9; }
+      footer { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 2rem; }
+      .footer-nav { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .footer-social { justify-content: center; }
+      .footer-right { text-align: center; }
+      section { padding: 4rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-brand">Audra Hawley Bellon</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Sessions</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding: 0;">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Rosemary Beach &amp; 30A Family Photographer</p>
+      <h1 class="hero-title">
+        Light that<br />
+        finds you <em>exactly</em><br />
+        as you are
+      </h1>
+      <p class="hero-sub">
+        Heirloom portraits for families, couples, and children along the emerald coast — made in golden light with intention and warmth.
+      </p>
+      <div class="hero-location">Rosemary Beach · Seaside · WaterSound · Inlet Beach</div>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Book a Session</a>
+        <a href="#gallery" class="btn-outline">View Gallery</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-accent-line"></div>
+      <div class="hero-photo-main">
+        <div class="hero-photo-overlay"></div>
+        <p class="hero-caption">golden hour, 30A</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE STRIP -->
+  <div class="experience-strip">
+    <div class="exp-item">
+      <div class="exp-number">12+</div>
+      <div class="exp-label">Years Photographing</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-number">800+</div>
+      <div class="exp-label">Families Served</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-number">30A</div>
+      <div class="exp-label">Local Expert</div>
+    </div>
+    <div class="exp-item">
+      <div class="exp-number">∞</div>
+      <div class="exp-label">Memories Kept</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-photo">
+      <div class="about-photo-frame"></div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">About Audra</p>
+      <h2 class="section-title">I photograph the in-between moments — the <em>real</em> ones</h2>
+      <p>
+        I'm Audra Hawley Bellon, a 30A-based photographer who fell in love with this stretch of coast and never left. I've spent over a decade learning how the light moves here — how it turns the water jade at dusk, and how it catches your daughter's hair right before she laughs.
+      </p>
+      <p>
+        My sessions are unhurried, relaxed, and built around the way your family actually is together — not a stiff pose but a walk, a story, a stolen glance. My approach blends fine-art portraiture with the warmth of documentary storytelling.
+      </p>
+      <p>
+        Whether you're here for one week a year or have made Rosemary Beach your forever home, I want to give you images you'll frame, share, and return to for decades.
+      </p>
+      <div class="about-signature">Audra Hawley Bellon</div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <div>
+        <p class="section-label">Sessions & Investment</p>
+        <h2 class="section-title">Photography <em>tailored</em><br />to your moment</h2>
+      </div>
+      <p class="services-intro">
+        Every session includes pre-session styling guidance, a curated gallery of fully edited images, and personal print recommendations. Most sessions are booked at golden hour — that hour before sunset when 30A glows.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-name">Family Sessions</div>
+        <p class="service-desc">One to two hours of unhurried portrait time along the beach, dunes, or a location that means something to your family. Ideal for groups of 2–12.</p>
+        <div class="service-price">Starting at $1,500</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-name">Couple & Engagement</div>
+        <p class="service-desc">Romantic, genuine portraits for couples — newly engaged or celebrating decades together. 30A's light was made for love stories.</p>
+        <div class="service-price">Starting at $1,200</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-name">Mini Sessions</div>
+        <p class="service-desc">Thirty focused minutes, a tight gallery of heirloom images. Perfect for returning clients, single subjects, or those seeking a curated capsule.</p>
+        <div class="service-price">Starting at $650</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-header">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">A glimpse of the <em>light</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item">
+        <div class="g-fill g-fill-1"></div>
+        <div class="g-overlay"><span class="g-overlay-text">Family · Rosemary Beach</span></div>
+      </div>
+      <div class="g-item">
+        <div class="g-fill g-fill-2"></div>
+        <div class="g-overlay"><span class="g-overlay-text">Golden Hour · Seaside</span></div>
+      </div>
+      <div class="g-item">
+        <div class="g-fill g-fill-3"></div>
+        <div class="g-overlay"><span class="g-overlay-text">Engagement · WaterSound</span></div>
+      </div>
+      <div class="g-item">
+        <div class="g-fill g-fill-4"></div>
+        <div class="g-overlay"><span class="g-overlay-text">Children · Inlet Beach</span></div>
+      </div>
+      <div class="g-item">
+        <div class="g-fill g-fill-5"></div>
+        <div class="g-overlay"><span class="g-overlay-text">Family · 30A Dunes</span></div>
+      </div>
+      <div class="g-item">
+        <div class="g-fill g-fill-6"></div>
+        <div class="g-overlay"><span class="g-overlay-text">Couple · Beach Walk</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div>
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">Simple. <em>Personal.</em> Memorable.</h2>
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-top: 1rem;">
+        From first message to finished gallery, the experience is designed to feel effortless — and the images are designed to last a lifetime.
+      </p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div>
+          <div class="step-name">Reach Out</div>
+          <p class="step-desc">Send a quick inquiry with your dates, location preference, and session type. I'll respond within 24 hours to check availability.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div>
+          <div class="step-name">Planning Call</div>
+          <p class="step-desc">We'll talk through outfit guidance, locations, timing, and the vibe you're going for. This is also where I learn your family's story.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div>
+          <div class="step-name">Golden Hour Session</div>
+          <p class="step-desc">We meet at the chosen location as the light softens. I guide gently while keeping things natural — no forced smiles, just real moments.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <div>
+          <div class="step-name">Gallery Delivery</div>
+          <p class="step-desc">Your curated gallery of fully edited, high-resolution images is delivered within 3 weeks via private online gallery — ready to download, print, and keep forever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <p class="section-label">Client Love</p>
+    <h2 class="section-title">Words from the <em>families</em> I've photographed</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">Audra has photographed our family three years in a row on 30A. Every single time she captures something we didn't know was there — a look between my husband and our son, a quiet laugh. These images are treasures.</p>
+        <div class="testimonial-name">The Morrison Family</div>
+        <div class="testimonial-loc">Rosemary Beach, Annual Session</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">We were skeptical about a beach session — we're not really "photo people." Audra changed that completely. She made us feel so comfortable and the images don't even look like us but somehow are exactly us.</p>
+        <div class="testimonial-name">Sarah & James Hartley</div>
+        <div class="testimonial-loc">WaterSound, Couple Session</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">Booking Audra was the best decision of our vacation. We come to 30A every summer and this year we finally have images to match the memories. Worth every penny and then some.</p>
+        <div class="testimonial-name">The Calloway Family</div>
+        <div class="testimonial-loc">Seaside, Family Session</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-photo"></div>
+    <div class="contact-form">
+      <p class="section-label">Let's Connect</p>
+      <h2 class="section-title">Ready to book your <em>30A session?</em></h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 2.5rem;">
+        Golden hour fills up fast — especially in summer. Reach out early and I'll hold your dates.
+      </p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane" />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="jane@example.com" />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Session Type</label>
+          <select>
+            <option value="">Select a session</option>
+            <option>Family Session</option>
+            <option>Couple & Engagement</option>
+            <option>Mini Session</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Location</label>
+          <select>
+            <option value="">Select a location</option>
+            <option>Rosemary Beach</option>
+            <option>Seaside</option>
+            <option>WaterSound</option>
+            <option>Inlet Beach</option>
+            <option>Other 30A</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Tell Me About Your Session</label>
+        <textarea placeholder="How many people, approximate dates, anything else I should know..."></textarea>
+      </div>
+      <a href="#" class="btn-primary" style="margin-top: 0.5rem;">Send My Inquiry</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <div class="footer-brand">Audra Hawley <span>Bellon</span></div>
+      <div class="footer-tagline">30A & Rosemary Beach Family Photographer</div>
+    </div>
+    <nav class="footer-nav">
+      <a href="#about">About</a>
+      <a href="#services">Sessions</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-right">
+      <div class="footer-social">
+        <a href="#" class="social-link">IG</a>
+        <a href="#" class="social-link">FB</a>
+        <a href="#" class="social-link">PI</a>
+      </div>
+      <div class="footer-copy">&copy; 2025 Audra Hawley Bellon Photography. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
