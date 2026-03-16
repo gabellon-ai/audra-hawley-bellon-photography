@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audra Bellon | 30A & Rosemary Beach Family Photographer</title>
-  <meta name="description" content="Audra Bellon — luxury family and lifestyle photographer serving Rosemary Beach, Seaside, WaterSound, and all of 30A. Heirloom images of your people, your light, your moment." />
+  <title>Ivory Dune Studio | Rosemary Beach & 30A Family Photographer</title>
+  <meta name="description" content="Ivory Dune Studio — luxury family and lifestyle photographer serving Rosemary Beach, Seaside, WaterSound, and all of 30A. Heirloom images of your people, your light, your moment." />
   <meta name="keywords" content="30A photographer, Rosemary Beach photographer, Seaside Florida photographer, 30A family photographer, Rosemary Beach family photos, 30A beach photographer, Inlet Beach photographer, WaterSound photographer" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -839,13 +839,105 @@
       color: var(--text-muted);
       font-size: 0.95rem;
     }
+
+    /* ─── LOGO & BRAND ─── */
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .logo-svg {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--warm-dark);
+    }
+
+    .logo-sub {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--driftwood);
+      margin-top: 3px;
+    }
+
+    /* Hero brand block */
+    .hero-brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-brand-svg {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+
+    .hero-brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--warm-dark);
+      line-height: 1;
+    }
+
+    .hero-brand-name span {
+      display: block;
+      font-size: 0.65em;
+      letter-spacing: 0.3em;
+      color: var(--driftwood);
+      font-weight: 400;
+      margin-top: 4px;
+    }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-brand">Audra Bellon</a>
+    <a href="#" class="logo-wrap">
+      <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Dune arc -->
+        <path d="M4 32 Q14 14 22 18 Q30 22 40 10" stroke="#B8966A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Second dune arc -->
+        <path d="M4 38 Q14 22 22 26 Q30 30 40 18" stroke="#D9CBBA" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+        <!-- Sun/circle -->
+        <circle cx="33" cy="12" r="5" stroke="#B8966A" stroke-width="1.2" fill="none"/>
+        <!-- Sun rays -->
+        <line x1="33" y1="5" x2="33" y2="3" stroke="#B8966A" stroke-width="0.8"/>
+        <line x1="38.5" y1="7" x2="40" y2="5.5" stroke="#B8966A" stroke-width="0.8"/>
+        <line x1="40.5" y1="12" x2="42.5" y2="12" stroke="#B8966A" stroke-width="0.8"/>
+        <line x1="27.5" y1="7" x2="26" y2="5.5" stroke="#B8966A" stroke-width="0.8"/>
+        <!-- Sand base line -->
+        <line x1="4" y1="40" x2="40" y2="40" stroke="#D9CBBA" stroke-width="0.6"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-name">Ivory Dune Studio</span>
+        <span class="logo-sub">30A · Rosemary Beach</span>
+      </div>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Sessions</a></li>
@@ -857,6 +949,22 @@
   <!-- HERO -->
   <section class="hero" style="padding: 0;">
     <div class="hero-left">
+      <div class="hero-brand">
+        <svg class="hero-brand-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 48 Q20 22 32 28 Q44 34 58 14" stroke="#B8966A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+          <path d="M6 56 Q20 32 32 38 Q44 44 58 24" stroke="#D9CBBA" stroke-width="1" fill="none" stroke-linecap="round"/>
+          <circle cx="48" cy="17" r="7" stroke="#B8966A" stroke-width="1.4" fill="none"/>
+          <line x1="48" y1="7" x2="48" y2="4" stroke="#B8966A" stroke-width="1"/>
+          <line x1="56" y1="10" x2="59" y2="7" stroke="#B8966A" stroke-width="1"/>
+          <line x1="59" y1="17" x2="62" y2="17" stroke="#B8966A" stroke-width="1"/>
+          <line x1="40" y1="10" x2="37" y2="7" stroke="#B8966A" stroke-width="1"/>
+          <line x1="48" y1="27" x2="48" y2="30" stroke="#B8966A" stroke-width="1"/>
+          <line x1="6" y1="60" x2="58" y2="60" stroke="#D9CBBA" stroke-width="0.8"/>
+        </svg>
+        <div>
+          <div class="hero-brand-name">Ivory Dune Studio<span>Photography</span></div>
+        </div>
+      </div>
       <p class="hero-eyebrow">Rosemary Beach &amp; 30A Family Photographer</p>
       <h1 class="hero-title">
         Light that<br />
@@ -1101,7 +1209,7 @@
           <label>Tell Me About Your Session</label>
           <textarea name="message" placeholder="How many people, approximate dates, anything else I should know..." style="resize:none;height:100px;"></textarea>
         </div>
-        <input type="hidden" name="_subject" value="New Session Inquiry — Audra Bellon Photography" />
+        <input type="hidden" name="_subject" value="New Session Inquiry — Ivory Dune Studio" />
         <input type="text" name="_gotcha" style="display:none;" />
         <button type="submit" class="btn-primary" style="margin-top:0.5rem;border:none;cursor:pointer;">Send My Inquiry</button>
       </form>
@@ -1119,8 +1227,8 @@
   <!-- FOOTER -->
   <footer>
     <div>
-      <div class="footer-brand">Audra <span>Bellon</span></div>
-      <div class="footer-tagline">30A & Rosemary Beach Family Photographer</div>
+      <div class="footer-brand">Ivory Dune <span>Studio</span></div>
+      <div class="footer-tagline">Rosemary Beach & 30A Family Photographer</div>
       <div class="footer-tagline" style="margin-top:0.4rem;"><a href="/cdn-cgi/l/email-protection#2e4f4c4b424241406e4d5b5c5c4b405a4257004d4143" style="color:var(--driftwood);text-decoration:none;font-size:0.75rem;"><span class="__cf_email__" data-cfemail="1475767178787b7a5477616666717a60786d3a777b79">[email&#160;protected]</span></a></div>
     </div>
     <nav class="footer-nav">
@@ -1135,7 +1243,7 @@
         <a href="#" class="social-link">FB</a>
         <a href="#" class="social-link">PI</a>
       </div>
-      <div class="footer-copy">&copy; 2025 Audra Bellon Photography. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2025 Ivory Dune Studio. All rights reserved.</div>
     </div>
   </footer>
 
