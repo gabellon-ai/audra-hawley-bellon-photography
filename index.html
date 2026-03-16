@@ -52,8 +52,10 @@
       padding: 1.5rem 4rem;
       background: rgba(245, 240, 232, 0.92);
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(184, 150, 106, 0.2);
       transition: padding 0.3s ease;
+      min-height: 80px;
     }
 
     .nav-brand {
@@ -819,13 +821,12 @@
       section { padding: 4rem 2rem; }
     }
 
-    /* iOS Safari safe area for notch/dynamic island */
-    @supports (padding-top: env(safe-area-inset-top)) {
-      nav {
-        padding-top: calc(1.5rem + env(safe-area-inset-top));
-      }
-      @media (max-width: 900px) {
-        nav { padding-top: calc(0.8rem + env(safe-area-inset-top)); }
+    /* iOS Safari safe area — mobile only */
+    @media (max-width: 900px) {
+      @supports (padding-top: env(safe-area-inset-top)) {
+        nav {
+          padding-top: calc(0.8rem + env(safe-area-inset-top));
+        }
         .hero-left {
           padding-top: calc(80px + env(safe-area-inset-top) + 1.5rem);
         }
