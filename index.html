@@ -103,14 +103,14 @@
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-top: 80px;
+      padding-top: 0;
     }
 
     .hero-left {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 5rem 4rem 5rem 4rem;
+      padding: 7rem 4rem 5rem 4rem;
     }
 
     .hero-eyebrow {
@@ -202,6 +202,8 @@
     .hero-right {
       position: relative;
       overflow: hidden;
+      padding-top: 80px;
+      margin-top: -80px;
     }
 
     /* Photo mosaic - CSS only placeholder art */
@@ -1015,7 +1017,7 @@
       <div class="hero-accent-line"></div>
       <div class="hero-photo-main">
         <div class="hero-photo-overlay"></div>
-        <p class="hero-caption">golden hour, 30A</p>
+        
       </div>
     </div>
   </section>
