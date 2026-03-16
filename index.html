@@ -50,7 +50,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.5rem 4rem;
-      background: rgba(245, 240, 232, 0.92);
+      background: rgba(245, 240, 232, 1.0);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(184, 150, 106, 0.2);
@@ -76,12 +76,12 @@
 
     .nav-links a {
       font-family: 'Jost', sans-serif;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 0.78rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--text-mid);
-      text-decoration: none;
+      color: #1A1008 !important;
+      text-decoration: none !important;
       transition: color 0.3s;
     }
 
@@ -112,7 +112,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 7rem 4rem 5rem 4rem;
+      padding: 4rem 4rem 4rem 4rem;
     }
 
     .hero-eyebrow {
@@ -125,10 +125,10 @@
 
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
+      font-weight: 500;
       font-size: clamp(3rem, 5vw, 5.5rem);
       line-height: 1.0;
-      color: var(--warm-dark);
+      color: #1A1008;
       margin-bottom: 2rem;
     }
 
@@ -259,10 +259,10 @@
 
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
+      font-weight: 500;
       font-size: clamp(2.2rem, 3.5vw, 3.5rem);
       line-height: 1.1;
-      color: var(--warm-dark);
+      color: #1A1008;
       margin-bottom: 1.5rem;
     }
 
@@ -772,7 +772,7 @@
     .hero-ctas     { animation: fadeUp 0.8s ease 0.8s both; }
 
     /* ─── RESPONSIVE ─── */
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       nav {
         padding: 1rem 1.5rem;
         padding-top: calc(1rem + env(safe-area-inset-top, 0px));
@@ -822,7 +822,7 @@
     }
 
     /* iOS Safari safe area — mobile only */
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
       @supports (padding-top: env(safe-area-inset-top)) {
         nav {
           padding-top: calc(0.8rem + env(safe-area-inset-top));
@@ -896,11 +896,11 @@
 
     .logo-name {
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
+      font-weight: 600;
       font-size: 1.15rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--warm-dark);
+      color: #1A1008 !important;
     }
 
     .logo-sub {
@@ -929,11 +929,11 @@
 
     .hero-brand-name {
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
+      font-weight: 500;
       font-size: clamp(1.8rem, 3vw, 2.8rem);
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--warm-dark);
+      color: #1A1008;
       line-height: 1;
     }
 
@@ -945,11 +945,68 @@
       font-weight: 400;
       margin-top: 4px;
     }
+
+    /* ─── HAMBURGER & MOBILE MENU ─── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #1A1008;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(245,240,232,0.98);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #1A1008 !important;
+      text-decoration: none;
+    }
+    .mobile-book {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white) !important;
+      background: var(--driftwood);
+      border: none;
+      padding: 1rem 2.2rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none !important; }
+      .nav-hamburger { display: flex; }
+    }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
+  <div style="height: 80px; display: block;"></div>
   <nav>
     <a href="#" class="logo-wrap">
       <svg class="logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -978,7 +1035,17 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><button class="nav-cta" style="cursor:pointer;border:none;" onclick="Calendly.initPopupWidget({url:'https://calendly.com/audra-hawley-bellon'});return false;">Book Now</button></li>
     </ul>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#services" onclick="closeMobileMenu()">Sessions</a>
+    <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+    <button onclick="Calendly.initPopupWidget({url:'https://calendly.com/audra-hawley-bellon'});closeMobileMenu();return false;" class="mobile-book">Book Now</button>
+  </div>
 
   <!-- HERO -->
   <section class="hero" style="padding: 0;">
